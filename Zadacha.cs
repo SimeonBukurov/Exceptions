@@ -101,7 +101,7 @@ namespace Exceptions
 
             try
             {
-                Person tooOldForThisProgram = new Person("Boiko", "Borisov", 37);
+                Person tooOldForThisProgram = new Person("Boiko", "Borisov", 140);
             }
             catch (ArgumentNullException ex)
             {
