@@ -15,13 +15,26 @@ namespace Exceptions
         public string FirstName
         {
             get { return this.firstName; }
-            set {this.firstName = value;}
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("value", "The first name cannot be null or empty.");
+                }
+                this.firstName = value;
+            }
         }
         public string LastName
         {
             get { return this.lastName; }
-            set {this.lastName = value;}
-          
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException("value", "The last name cannot be null or empty.");
+                }
+                this.lastName = value;
+            }
         }
         public int Age
         {
