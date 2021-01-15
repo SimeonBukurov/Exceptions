@@ -27,7 +27,7 @@ namespace Exceptions
         public string LastName
         {
             get { return this.lastName; }
-            set {this.lastname = value;}
+            set 
             {
                 if (string.IsNullOrEmpty(value))
                 {
