@@ -15,26 +15,13 @@ namespace Exceptions
         public string FirstName
         {
             get { return this.firstName; }
-            set 
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("value", "The first name cannot be null or empty.");
-                }
-                this.firstName = value;
-            }
+            set {this.firstName = value;}
         }
         public string LastName
         {
             get { return this.lastName; }
-            set 
-            {
-                if (string.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentNullException("value", "The last name cannot be null or empty.");
-                }
-                this.lastName = value;
-            }
+            set {this.lastName = value;}
+          
         }
         public int Age
         {
@@ -62,7 +49,7 @@ namespace Exceptions
             Person pesho = new Person("Ivan", "Marinov", 26);
             try
             {
-                Person noName = new Person(string.Empty, "Sergey", 75);
+                Person noName = new Person("Martin", "Sergeev", 75);
             }
             catch (ArgumentNullException ex)
             {
@@ -75,7 +62,7 @@ namespace Exceptions
 
             try
             {
-                Person noLastName = new Person("James", null, 23);
+                Person noLastName = new Person("James", "Ivanov", 23);
             }
             catch (ArgumentNullException ex)
             {
