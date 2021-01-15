@@ -15,7 +15,7 @@ namespace Exceptions
         public string FirstName
         {
             get { return this.firstName; }
-            set
+            set 
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -27,7 +27,7 @@ namespace Exceptions
         public string LastName
         {
             get { return this.lastName; }
-            set
+            set {this.lastname = value;}
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -39,7 +39,7 @@ namespace Exceptions
         public int Age
         {
             get { return this.age; }
-            set
+            set 
             {
                 if (value < 0 || value > 120)
                 {
