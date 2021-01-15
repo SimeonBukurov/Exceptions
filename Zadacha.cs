@@ -62,7 +62,7 @@ namespace Exceptions
             Person pesho = new Person("Ivan", "Marinov", 26);
             try
             {
-                Person noName = new Person("Martin", "Sergeev", 75);
+                Person noName = new Person(string.Empty, "Sergey", 75);
             }
             catch (ArgumentNullException ex)
             {
@@ -75,7 +75,7 @@ namespace Exceptions
 
             try
             {
-                Person noLastName = new Person("James", "Ivanov", 23);
+                Person noLastName = new Person("James", null, 23);
             }
             catch (ArgumentNullException ex)
             {
